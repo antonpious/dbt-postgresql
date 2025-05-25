@@ -1,0 +1,17 @@
+# While still in the virtual environment of the project
+# initialize DBT
+dbt init dbtplaydb
+
+# Change to the dbt init directory
+cd dbtplaydb
+
+# check the connection
+dbt debug
+
+# a warning would appear on asking if VS code can connect to local PostgreSQL without a password
+# click ok
+
+# to run the project
+dbt run
+
+
