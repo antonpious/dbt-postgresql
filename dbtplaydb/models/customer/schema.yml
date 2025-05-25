@@ -1,0 +1,10 @@
+
+version: 2
+
+# this config is not getting used
+# TODO have to find a way to select tables without specifying a schema 
+sources:
+  - name: sales
+    tables:
+      - name: customer
+
