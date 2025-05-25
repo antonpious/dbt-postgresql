@@ -61,5 +61,9 @@ Second is a table that selects the id and Full name but splits the full name int
 You would also see some example file from dbt init which would create a table and a view. This you can keep or delete.
 
 
+Note:
+When checkin to github
+Since you are already in the dbt project folder come to the parent folder and then do the check-in  
+Else only the dbt project files would be checked in.
 
 
