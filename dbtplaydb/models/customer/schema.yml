@@ -1,10 +1,23 @@
 
 version: 2
 
-# this config is not getting used
-# TODO have to find a way to select tables without specifying a schema 
-sources:
-  - name: sales
-    tables:
-      - name: customer
+models:
+  - name: table_customer_model
+    description: One record per customer
+    columns:
+      - name: customer_id
+        description: Unique customer Id
+  - name: contacts
+    description: This model clean contacts data
+    config:
+      # Basic Configs
+      materialized: incremental
+      # if there are duplicate records this key would be used for merge
+      unique_key: contact_id
+      incremental_strategy: merge
+      # Advanced Configurations
+      on_schema_change: "sync_all_columns" 
+    columns:
+      - name: contact_id
+        description: Unique customer Id
 

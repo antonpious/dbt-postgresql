@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+    - name: dbtplaydb
+      description: This is a replica of the Postgres database used by our app
+      database: dbtplaydb
+      schema: sales
+      tables:
+          - name: customers
+            description: One record per customer.
+          - name: contacts
+            description: One record per contact.
