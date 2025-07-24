@@ -24,14 +24,7 @@ contacts as (
     select 
         ----- id
         id as contact_id,
-        ----- full name
-        full_name,
-        --- email
-        email,
-        --- created at
-        created_at,
-        --- updated at
-        updated_at,
+        *,
         -- last loaded as current timestamp,
         true as is_active,
         CURRENT_TIMESTAMP as last_loaded_at
